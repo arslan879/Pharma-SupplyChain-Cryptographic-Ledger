@@ -1,2 +1,4 @@
 # Pharma-SupplyChain-Cryptographic-Ledger
 This project implements an enterprise grade hybrid relational and cryptographic ledger architecture designed to secure pharmaceutical supply chains and track medical product provenance from raw active ingredients to the end consumer.
+
+Traditional relational databases handle operational workflows, while an immutable append-only ledger table records sequential lifecycle milestones. To prevent internal tampering, inter-block cryptographic integrity is enforced using SHA-256 hash chaining (where each block securely binds to the previous hash), accompanied by database-level triggers that explicitly prohibit unauthorized modifications or deletions of audit history. The database model integrates 11 normalized entities featuring complex many-to-many formulations, weak dependent storage zones, and self-referencing distribution hierarchies.
